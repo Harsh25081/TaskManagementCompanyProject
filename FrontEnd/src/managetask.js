@@ -6,7 +6,7 @@ const ManageTask = () => {
     let [error, setError] = useState("")
 
     const GetAllTasks = () => {
-        axios.get("http://localhost:3001/gettask")
+        axios.get("https://task-management-backend.netlify.app/.netlify/functions/api/gettask")
             .then((res) => { console.log(res.data); setDemo(res.data.data) })
             .catch((err) => { console.log(err.message); setError(err.message) })
     }
@@ -31,7 +31,7 @@ const ManageTask = () => {
         let task = demo.filter((dem) => {
             if (dem.Title === Title) {
                 dem.Status = Status
-                axios.put("http://localhost:3001/updatetask", { Title, Status })
+                axios.put("https://task-management-backend.netlify.app/.netlify/functions/api/updatetask", { Title, Status })
                     .then((res) => { console.log(res.data) })
                     .catch((err) => { console.log(err.message) })
             }
@@ -46,7 +46,7 @@ const ManageTask = () => {
         let task = demo.filter((dem) => {
             if (dem.Title === Title) {
                 dem.Status = Status
-                axios.put("http://localhost:3001/updatetask", { Title, Status })
+                axios.put("https://task-management-backend.netlify.app/.netlify/functions/api/updatetask", { Title, Status })
                     .then((res) => { console.log(res.data) })
                     .catch((err) => { console.log(err.message) })
             }
@@ -87,7 +87,7 @@ const ManageTask = () => {
                         let { Title, Status, Deadline } = book
                         if (Status === "Work-In-Progress") {
                             return <div
-                                key={index} style={{ border: "2px solid Lime", margin: '5px', background: "yellow", borderRadius: "10px" }}
+                                key={index} style={{ border: "2px solid black", margin: '5px', background: "yellow", borderRadius: "10px" }}
                                 draggable onDragStart={(e) => dragstart(e, Title)}>
                                 <p style={{ margin: "1px" }}>Title : {Title} <br /> Deadline :{Deadline.split("T")[0]}</p>
                             </div>
