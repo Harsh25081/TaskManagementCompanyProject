@@ -61,7 +61,7 @@ const ManageTask = () => {
                 {error !== "" && <p>{error}</p>}
                 <div
                     className="center-block"
-                    style={{ backgroundColor: "#00FFFF", height: "500px", width: "30%", margin: "10px", float: "center", border: "1.5px solid blue", borderRadius: "10px" }}>
+                    style={{overflow:"hidden", backgroundColor: "#00FFFF", height: "500px", width: "30%", margin: "10px", float: "center", border: "1.5px solid blue", borderRadius: "10px" }}>
                     <label style={{ borderBottom: "2px solid black", width: "100%", background: "violet", textAlign: "center" }}>
                         Open</label>
                     {demo.map((book, index) => {
@@ -78,7 +78,7 @@ const ManageTask = () => {
 
                 <div
                     className="center-block"
-                    style={{ backgroundColor: "#00FFFF", height: "500px", width: "30%", margin: "10px", float: "center", border: "1.5px solid blue", borderRadius: "10px" }}
+                    style={{overflow:"hidden", backgroundColor: "#00FFFF", height: "500px", width: "30%", margin: "10px", float: "center", border: "1.5px solid blue", borderRadius: "10px" }}
                     onDragOver={(e) => draggingOver(e)}
                     onDrop={(e) => dragDropped(e, "Work-In-Progress")}>
                     <label style={{ borderBottom: "2px solid black", width: "100%", background: "violet", textAlign: "center" }}>
@@ -97,7 +97,7 @@ const ManageTask = () => {
 
                 <div
                     className="center-block"
-                    style={{ backgroundColor: "#00FFFF", height: "500px", width: "30%", margin: "10px", float: "center", border: "1.5px solid blue", borderRadius: "10px" }}
+                    style={{overflow:"hidden", backgroundColor: "#00FFFF", height: "500px", width: "30%", margin: "10px", float: "center", border: "1.5px solid blue", borderRadius: "10px" }}
                     onDragOver={(e) => draggingOver(e)}
                     onDrop={(e) => dragDroppedComp(e, "Completed")}>
                     <label style={{ borderBottom: "2px solid black", width: "100%", background: "violet", textAlign: "center" }}>
