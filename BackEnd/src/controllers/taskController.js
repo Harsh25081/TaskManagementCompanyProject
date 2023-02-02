@@ -34,7 +34,6 @@ exports.CreateTask = async (req, res) => {
 exports.GetTask = async (req, res) => {
     try {
         const GetTask = await taskModel.find()
-        console.log(GetTask)
         if (GetTask.length == 0) return res.status(404).send({ status: false, message: "No Task Available" })
         return res.status(200).send({ status: true, data: GetTask })
     } catch (error) {
